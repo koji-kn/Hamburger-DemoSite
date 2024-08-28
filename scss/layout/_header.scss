@@ -1,0 +1,30 @@
+@use"../foundation/variables";
+@use"../foundation/mixin";
+
+.l-header{
+    font-family: "Roboto", sans-serif;
+    padding-top: 60px;
+
+    @include mixin.breakpoint(full){
+        padding-top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    &__logo > h1{
+        font-size: 4.0rem;
+        text-align: center;
+        line-height: 48px;
+
+        @include mixin.breakpoint(pc){
+            font-size: 6.4rem;
+        }
+
+        @include mixin.breakpoint(full){
+            margin-left: 64px;
+        }
+    }
+
+
+}

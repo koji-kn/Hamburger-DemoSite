@@ -1,0 +1,153 @@
+@use"../foundation/variables";
+@use"../foundation/mixin";
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    min-width: 375px;
+    width: 100%;
+    margin: 0;
+    font-family: "M PLUS 1", "Roboto", sans-serif;
+    font-size: 1.6rem;
+    background: variables.$color--white;
+    color: variables.$color--font;
+    line-height: 1.7;
+    overflow-x: hidden;
+
+}
+
+@include mixin.breakpoint(pc){
+    body{
+        display: grid;
+        grid-template:
+        "header aside" 216px
+        "main aside" 
+        "footer footer" 150px;
+    }
+
+    .l-header{
+        grid-area: header;
+    }
+
+    .l-main{
+        grid-area: main;
+    }
+
+    .l-side{
+        grid-area: aside;
+    }
+    
+    .l-footer{
+        grid-area: footer;
+    }
+    
+
+}   
+
+img{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+h1,h2,h3,h4,h5,h6,p,figure{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+// h1{
+//     font-family: "Hind", sans-serif;
+//     font-weight: 500;
+//     font-style: normal;
+//     line-height: 1.2;
+//     font-size: 4.8rem;
+
+//     @include mixin.breakpoint(pc){
+//         font-size: 12.8rem;
+//     }
+// }
+
+// h2{
+//     font-size: 2.8rem;
+
+//     @include mixin.breakpoint(pc){
+//         font-size: 3.6rem;
+//     }
+// }
+
+// h3{
+//     font-size: 1.8rem;
+
+//     @include mixin.breakpoint(pc){
+//         font-size: 2.8rem;
+//     }
+// }
+
+
+// p{
+//     white-space: wrap;
+//     font-size: 1.6rem;
+
+//     @include mixin.breakpoint(pc){
+//         font-size: 2.0rem;
+//     }
+// }
+
+// h4{
+//     font-size: 1.4rem;
+//     height: 50px;
+//     line-height: 50px;
+// }
+
+ul,ol{
+    list-style-type: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+input:focus {
+    outline: 1px darkorange solid;
+}
+
+.more-link{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    > a{
+      color: variables.$color--link;
+    }
+}
+
+.link-color{
+    color: variables.$color--link;  
+}
+
+.inview,
+.inview-back{
+    transform: translateY(30px);
+    opacity: 0;
+    transition: tramsform 1s, opacity 1s;
+}
+
+.inview.show{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.inview-back.show{
+    transform: translateY(0);
+    opacity: 0.5;
+}
+
+i{
+    margin: 0 5px;
+}
+
+

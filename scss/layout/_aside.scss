@@ -1,0 +1,17 @@
+@use"../foundation/variables";
+@use"../foundation/mixin";
+
+.l-side{
+    background: variables.$color--aside;
+
+    &__title{
+        font-size: 0;
+
+        @include mixin.breakpoint(pc){
+            font-size: 3.6rem;
+            padding-left: 46px;
+            line-height: 216px;
+        }
+    }
+
+}

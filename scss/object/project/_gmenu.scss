@@ -1,0 +1,110 @@
+@use"../../foundation/variables";
+@use"../../foundation/mixin";
+
+.hover-icon{
+    opacity: 0;
+}
+
+.p-gmenu{
+    
+
+    .list{
+        transition: all 300ms 0s ease;
+        position: fixed;
+        padding-top: 178px;
+        width: 328px;
+        height: 100vh;
+        background: variables.$color--aside;
+        top: 0;
+        left: 100%;
+        z-index: 100;
+        overflow-y: scroll;
+
+        @include mixin.breakpoint(tablet){
+            width :367px;
+        }
+        
+        @include mixin.breakpoint( pc ) {
+			height: 100%;
+			padding-top: 0;
+			position: static;
+            transition: inherit;
+            overflow-y: hidden;
+		}
+
+        &__child{
+            
+            li{
+                padding-left: 46px;
+                font-size: 2.0rem;
+                margin-bottom: 18px;
+                
+                
+                &:last-child{
+                    margin-bottom: 70px;
+                }
+
+                &:hover{
+                    background: whitesmoke;
+                    transition: background 0.3s;
+                }
+                
+                &:hover  .hover-icon{
+                    opacity: 1;
+                    transition: opacity 0.3s;
+                }
+
+                a{
+                    display: inline-block;
+                }
+            }
+        }
+
+        
+        
+        &__title {
+            font-size: 2.4rem;
+            padding-left: 46px;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+  
+    }  
+
+    &.is-open{
+
+        >.list{
+            left: calc(100vw - 328px);
+
+            @include mixin.breakpoint(tablet){
+                left: calc(100vw - 367px);
+            }
+
+        }
+    }
+  
+}
+
+.mask{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0;
+    z-index: 99;
+
+    @include mixin.breakpoint(pc){
+        display: none;
+    }
+
+    &.is-open{
+        left: 0;
+        opacity: 0.5;
+        transition: opacity 0.1s;
+    }
+}
+
+
+

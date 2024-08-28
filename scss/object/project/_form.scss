@@ -1,0 +1,40 @@
+@use"../../foundation/variables";
+@use"../../foundation/mixin";
+
+.p-search-form{
+    column-gap: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @include mixin.breakpoint(full){
+        margin: 0 30px;
+    }
+    
+    &__input,
+    &__submit{
+        border: 1px solid variables.$color--font;
+        border-radius: 10px;
+        height: 46px;
+    }
+    
+    &__input{
+        width: 216px;
+        padding-left: 30px;
+        background: url(../images/icon/search.png) no-repeat left 4px center;
+
+        @include mixin.breakpoint(tablet){
+            width: 396px;
+        }
+
+    }
+    
+    &__submit{
+        width: 90px;
+
+        @include mixin.breakpoint(tablet){
+            width: 136px;
+        }
+
+    }
+
+}

@@ -1,0 +1,11 @@
+.c-btn{
+    background: linear-gradient( #F2EDE9 0%, #DED8D3 100%);
+    font-weight: bold;
+
+    &:hover{
+        opacity: 0.8;
+        transform: translateY(-4px);
+        box-shadow: 0 4px grey;
+    
+    }
+}
