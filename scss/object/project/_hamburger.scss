@@ -12,7 +12,7 @@ $btnHeight: 6px;
     position: absolute;
     top: 0;
     right: 0;
-	z-index: 1000;
+	z-index: 1001;
 
 	@include mixin.breakpoint(pc){
         display: none;

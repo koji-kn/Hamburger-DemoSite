@@ -17,7 +17,7 @@
         background: variables.$color--aside;
         top: 0;
         left: 100%;
-        z-index: 100;
+        z-index: 1000;
         overflow-y: scroll;
 
         @include mixin.breakpoint(tablet){
@@ -35,7 +35,7 @@
         &__child{
             
             li{
-                padding-left: 46px;
+                padding-left: 66px;
                 font-size: 2.0rem;
                 margin-bottom: 18px;
                 

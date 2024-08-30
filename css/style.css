@@ -6,7 +6,7 @@ body {
   min-width: 375px;
   width: 100%;
   margin: 0;
-  font-family: "M PLUS 1", "Roboto", sans-serif;
+  font-family: "Roboto", "M PLUS 1", sans-serif;
   font-size: 1.6rem;
   background: #FFFDFA;
   color: #707070;
@@ -17,7 +17,8 @@ body {
 @media (min-width: 1000px) {
   body {
     display: grid;
-    grid-template: "header aside" 216px "main aside" "footer footer" 150px;
+    grid-template: "header aside" 216px "main aside" "footer footer";
+    grid-template-columns: 1fr 378px;
   }
   .l-header {
     grid-area: header;
@@ -42,6 +43,15 @@ h1, h2, h3, h4, h5, h6, p, figure {
   margin: 0;
   padding: 0;
   font-size: 100%;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3.6rem;
+}
+
+small {
+  font-size: 1.4rem;
 }
 
 ul, ol {
@@ -70,8 +80,7 @@ input:focus {
   color: #00FFFF;
 }
 
-.inview,
-.inview-back {
+.inview {
   transform: translateY(30px);
   opacity: 0;
   transition: tramsform 1s, opacity 1s;
@@ -82,13 +91,8 @@ input:focus {
   opacity: 1;
 }
 
-.inview-back.show {
-  transform: translateY(0);
-  opacity: 0.5;
-}
-
-i {
-  margin: 0 5px;
+.l-main {
+  width: 100%;
 }
 
 .l-header {
@@ -133,6 +137,56 @@ i {
   }
 }
 
+.l-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 150px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #FFFDFA;
+  background: #9D8670;
+  position: relative;
+}
+@media (min-width: 630px) {
+  .l-footer {
+    padding-top: 30px;
+    padding-bottom: 24px;
+  }
+}
+@media (min-width: 1000px) {
+  .l-footer {
+    padding-top: 41px;
+    padding-bottom: 27px;
+  }
+}
+.l-footer__menu li {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.l-footer__menu li:last-child {
+  border-left: 1px solid #fff;
+}
+
+.c-typography {
+  position: relative;
+}
+.c-typography__info {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.c-typography__img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .c-btn {
   background: linear-gradient(#F2EDE9 0%, #DED8D3 100%);
   font-weight: bold;
@@ -156,7 +210,7 @@ i {
   background: #F2EDE9;
   top: 0;
   left: 100%;
-  z-index: 100;
+  z-index: 1000;
   overflow-y: scroll;
 }
 @media (min-width: 630px) {
@@ -174,7 +228,7 @@ i {
   }
 }
 .p-gmenu .list__child li {
-  padding-left: 46px;
+  padding-left: 66px;
   font-size: 2rem;
   margin-bottom: 18px;
 }
@@ -235,7 +289,7 @@ i {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 1001;
 }
 @media (min-width: 1000px) {
   .p-hamburger {
@@ -281,6 +335,85 @@ i {
   transform: scaleY(0);
 }
 
+.p-mainvisual {
+  width: 100%;
+  height: 285px;
+  position: relative;
+}
+@media (min-width: 1000px) {
+  .p-mainvisual {
+    height: 530px;
+  }
+}
+.p-mainvisual__title {
+  position: absolute;
+}
+.p-mainvisual__title {
+  margin-left: 25px;
+  letter-spacing: 2px;
+  color: #FFFDFA;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 1;
+}
+@media (min-width: 630px) {
+  .p-mainvisual__title {
+    margin-left: 66px;
+  }
+}
+.p-mainvisual__img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+}
+
+.p-information {
+  width: 100%;
+  max-width: 1300px;
+  margin: 120px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.p-information__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.p-information__typography {
+  max-width: 616px;
+  aspect-ratio: 335/642;
+}
+.p-information__title {
+  font-size: 8rem;
+  margin-left: 10px;
+  color: #FFFDFA;
+  position: relative;
+}
+.p-information__title::after {
+  position: absolute;
+  content: "";
+  background-color: #FFFDFA;
+  width: 63px;
+  height: 4px;
+  top: 160px;
+  left: 17px;
+}
+.p-information__detail {
+  font-family: "M PLUS 1";
+  margin: 16px;
+  padding: 6px 16px 21px 16px;
+  background: rgba(255, 255, 255, 0.8);
+}
+.p-information__detail h3 {
+  font-size: 2.4rem;
+  margin-bottom: 6px;
+}
+.p-information__detail p {
+  color: #707070;
+  font-weight: bold;
+}
+
 .p-search-form {
   -moz-column-gap: 10px;
        column-gap: 10px;
@@ -319,6 +452,11 @@ i {
 .u-margin__center {
   margin-left: auto;
   margin-right: auto;
+}
+
+.u-margin__middle {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .u-flex {

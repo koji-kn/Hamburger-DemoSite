@@ -9,13 +9,12 @@ body{
     min-width: 375px;
     width: 100%;
     margin: 0;
-    font-family: "M PLUS 1", "Roboto", sans-serif;
+    font-family: "Roboto", "M PLUS 1",  sans-serif;
     font-size: 1.6rem;
     background: variables.$color--white;
     color: variables.$color--font;
     line-height: 1.7;
     overflow-x: hidden;
-
 }
 
 @include mixin.breakpoint(pc){
@@ -24,7 +23,8 @@ body{
         grid-template:
         "header aside" 216px
         "main aside" 
-        "footer footer" 150px;
+        "footer footer" ;
+        grid-template-columns: 1fr 378px;
     }
 
     .l-header{
@@ -58,17 +58,10 @@ h1,h2,h3,h4,h5,h6,p,figure{
     font-size: 100%;
 }
 
-// h1{
-//     font-family: "Hind", sans-serif;
-//     font-weight: 500;
-//     font-style: normal;
-//     line-height: 1.2;
-//     font-size: 4.8rem;
-
-//     @include mixin.breakpoint(pc){
-//         font-size: 12.8rem;
-//     }
-// }
+h1{
+    font-weight: 700;
+    font-size: 3.6rem;
+}
 
 // h2{
 //     font-size: 2.8rem;
@@ -102,6 +95,10 @@ h1,h2,h3,h4,h5,h6,p,figure{
 //     line-height: 50px;
 // }
 
+small{
+    font-size: 1.4rem;
+}
+
 ul,ol{
     list-style-type: none;
 }
@@ -129,8 +126,7 @@ input:focus {
     color: variables.$color--link;  
 }
 
-.inview,
-.inview-back{
+.inview{
     transform: translateY(30px);
     opacity: 0;
     transition: tramsform 1s, opacity 1s;
@@ -141,13 +137,5 @@ input:focus {
     opacity: 1;
 }
 
-.inview-back.show{
-    transform: translateY(0);
-    opacity: 0.5;
-}
-
-i{
-    margin: 0 5px;
-}
 
 
