@@ -3,4 +3,17 @@
 
 .l-main{
     width: 100%;
+
+    &__title{
+        color: variables.$color--white;
+        position: relative;
+             
+        &::after{
+            position: absolute;
+            content: "";
+            background-color: variables.$color--white;           
+
+        }
+}
+
 }
