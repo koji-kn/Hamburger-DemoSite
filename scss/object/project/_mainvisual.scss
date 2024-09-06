@@ -5,26 +5,57 @@
     width: 100%;
     height: 285px;
     position: relative;
-
+    
     @include mixin.breakpoint(pc){
         height: 530px;
+    }
+    
+    dl{
+        padding-left: 12px;
+        display: flex;
+        flex-direction: column;
+
+        @include mixin.breakpoint(pc){
+            flex-direction: row;
+            align-items: center;
+            column-gap: 18px;
+        }
+
+    }
+
+    dd{
+        @include mixin.breakpoint(pc){
+            padding-top: 12px;
+        }
+    }
+
+    &--single{
+        @include mixin.breakpoint(pc){
+            height: 240px;
+        }
     }
 
     &__title{
         position: absolute;
-    }
-
-
-    &__title{
+        font-family: "Roboto";
         margin-left: 25px;
         letter-spacing: 2px;
         color: variables.$color--white;
         top: 50%;
         transform: translate(0, -50%);
         z-index: 1;
-
+    
         @include mixin.breakpoint(tablet){
             margin-left: 66px;
+        }
+
+        @include mixin.breakpoint(pc){
+            font-size: 4.0rem;
+        }
+
+
+        &--single{
+            letter-spacing: normal;
         }
     
     }

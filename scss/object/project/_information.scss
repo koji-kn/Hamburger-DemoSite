@@ -1,98 +1,69 @@
 @use"../../foundation/variables";
 @use"../../foundation/mixin";
+.p-information,
+.p-information__mask{
+    background: rgba($color: #000000, $alpha: 0.3);
+}
+
 
 .p-information{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+    margin-top: 20px;
+    color: #fff;
     
-    @include mixin.breakpoint(tablet){
-        flex-direction: row;
-        justify-content: space-between;
-
-        max-width: 755px;
-        column-gap: 10px;
-        margin: 40px auto;
-    }
-
-    @include mixin.breakpoint(full){
-        max-width: 1300px;
-        margin: 120px auto;
-    }
-
     &__wrap{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        max-width: 950px;
+        padding: 41px 40px 57px;
+
+        @include mixin.breakpoint(full){
+            padding: 86px 134px 75px 119px;
+        }
     }
 
-    &__typography{
-        display: flex;
-        flex: 1;
-        margin: 20px;
-        min-height: 643px;
-        
+    &__mask{
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
         @include mixin.breakpoint(tablet){
-            max-width: 357px;
-            margin: auto;
-            min-height: 680px;
-        }
-        
-        @include mixin.breakpoint(full){
-            max-width: 616px;
-            min-height: 1197px;
+            height: 100%;
         }
 
-        &:hover{
-            opacity: 0.7;
+        @include mixin.breakpoint(tablet){
+            height: 100%;
+            max-width: 950px;
         }
     }
-    
+
+
     &__title{
-        margin-top: 6px;
-        margin-left: 16px;
-        font-size: 4.1rem;
+        font-size: 3.0rem;
+        margin-bottom: 30px;
         
         
         @include mixin.breakpoint(full){
-            font-size: 8.0rem;
+            font-size: 3.6rem;
+            margin-bottom: 109px;
         }
         
         &::after{
-            width: 36px;
-            height: 5px;
-            top: 80px;
-            left: 6px;
+            width: 75px;
+            height: 2px;
+            top: 62px;
+            left: 0;
             
             @include mixin.breakpoint(full){
-                width: 63px;
-                top: 160px;
-                left: 7px;
+                top: 110px;
             }
         }
         
     }
 
-    &__detail{
-        font-family: "M PLUS 1";
-        margin: 16px;
-        padding: 6px 16px 21px 16px;
-        background: rgba($color: #fff, $alpha: 0.8);
-
-        h3{
-            font-size: 2.4rem;
-            margin-bottom: 6px;
-        }
-
-        p{
-            color: variables.$color--font;
-            font-weight: bold;
-            font-size: 1.4rem;
-        
-            @include mixin.breakpoint(full){
-                font-size: 1.6rem;
-            }
-        }
-        
+    &__text{
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 33px;
     }
 }

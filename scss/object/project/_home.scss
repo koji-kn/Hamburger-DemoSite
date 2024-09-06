@@ -1,0 +1,99 @@
+@use"../../foundation/variables";
+@use"../../foundation/mixin";
+
+.p-home{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    @include mixin.breakpoint(tablet){
+        flex-direction: row;
+        justify-content: space-between;
+
+        max-width: 755px;
+        column-gap: 10px;
+        margin: 40px auto;
+    }
+
+    @include mixin.breakpoint(full){
+        max-width: 1300px;
+        margin: 120px auto;
+    }
+
+    &__wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__typography{
+        display: flex;
+        flex: 1;
+        margin: 20px;
+        min-height: 643px;
+        
+        @include mixin.breakpoint(tablet){
+            max-width: 357px;
+            margin: auto;
+            min-height: 680px;
+        }
+        
+        @include mixin.breakpoint(full){
+            max-width: 616px;
+            min-height: 1197px;
+        }
+
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+    
+    &__title{
+        margin-top: 6px;
+        margin-left: 16px;
+        font-size: 4.1rem;
+        margin-bottom: 30px;
+        
+        
+        @include mixin.breakpoint(full){
+            font-size: 8.0rem;
+        }
+        
+        &::after{
+            width: 36px;
+            height: 5px;
+            top: 80px;
+            left: 6px;
+            
+            @include mixin.breakpoint(full){
+                width: 63px;
+                top: 160px;
+                left: 7px;
+            }
+        }
+        
+    }
+
+    &__detail{
+        font-family: "M PLUS 1";
+        margin: 16px;
+        padding: 6px 16px 21px 16px;
+        background: rgba($color: #fff, $alpha: 0.8);
+
+        h3{
+            font-size: 2.4rem;
+            margin-bottom: 6px;
+        }
+
+        p{
+            color: variables.$color--font;
+            font-weight: bold;
+            font-size: 1.4rem;
+        
+            @include mixin.breakpoint(full){
+                font-size: 1.6rem;
+            }
+        }
+        
+    }
+}

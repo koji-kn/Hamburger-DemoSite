@@ -1,0 +1,36 @@
+#page-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.4rem;
+    line-height: 1;
+    z-index: 999;
+
+}
+.arrow-up{
+    position: relative;
+    background: #3C2A10;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    display: block;
+    border-radius: 50%;
+    opacity: 0.9;
+
+    &:hover{
+        opacity: 0.5;
+    }
+
+    &::before{
+        position: absolute;
+        content: "";
+        width: 12px;
+        height: 12px;
+        border: 0;
+        border-top: 4px solid #fff;
+        border-left: 4px solid #fff;
+        transform: rotate(45deg);
+        top: 25px;
+        left: 23px;
+    }
+}

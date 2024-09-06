@@ -78,5 +78,22 @@
         });
     });
 
-
+    //TOPへ戻るボタン
+    $(function(){
+        const pagetop = $('#page-top');
+        pagetop.hide();
+        $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+                pagetop.fadeIn(200);
+        } else {
+                pagetop.fadeOut(100);
+        }
+        });
+        pagetop.click(function () {
+        $('body, html').animate({ scrollTop: 0 }, 500);
+        return false;
+        });
+    });
+  
+  
 }
