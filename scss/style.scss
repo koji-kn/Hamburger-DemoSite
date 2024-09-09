@@ -17,17 +17,15 @@
 // ==========================================================================
 // Object
 // ==========================================================================
-// @forward"../scss/object/component/single";
-// @forward"../scss/object/component/card";
+@forward"../scss/object/component/card";
 // @forward"../scss/object/component/table";
 // @forward"../scss/object/component/player";
-// @forward"../scss/object/component/container";
-// @forward"../scss/object/component/movie";
 @forward"../scss/object/component/typography";
 // @forward"../scss/object/component/modal";
 // @forward"../scss/object/component/hover";
 @forward"../scss/object/component/button";
 @forward"../scss/object/component/home-btn";
+@forward"../scss/object/component/arrow";
 // @forward"../scss/object/component/triangle";
 
 // -----------------------------------------------------------------
@@ -39,10 +37,9 @@
 @forward"../scss/object/project/home";
 @forward"../scss/object/project/form";
 @forward"../scss/object/project/information";
-// @forward"../scss/object/project/blog";
-// @forward"../scss/object/project/movie";
-// @forward"../scss/object/project/disc";
-// @forward"../scss/object/project/biography";
+@forward"../scss/object/project/archive";
+@forward"../scss/object/project/pagination";
+
 // -----------------------------------------------------------------
 // utility
 // -----------------------------------------------------------------

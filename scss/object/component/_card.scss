@@ -1,0 +1,8 @@
+.c-card{
+    display: flex;
+     
+    &__img > img{
+        height: 100%;
+        object-fit: cover;
+    }
+}

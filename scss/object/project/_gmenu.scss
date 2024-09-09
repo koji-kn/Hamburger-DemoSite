@@ -35,27 +35,21 @@
         &__child{
             
             li{
-                padding-left: 66px;
                 font-size: 2.0rem;
-                margin-bottom: 18px;
-                
+                padding-left: 66px;
                 
                 &:last-child{
-                    margin-bottom: 70px;
-                }
-
-                &:hover{
-                    background: whitesmoke;
-                    transition: background 0.3s;
+                    margin-bottom: 60px;
                 }
                 
-                &:hover  .hover-icon{
-                    opacity: 1;
-                    transition: opacity 0.3s;
-                }
-
                 a{
-                    display: inline-block;
+                    display: block;
+                    padding: 9px 10px 9px 0;
+                    
+                    &::before{
+                        left: 0;
+                        width: 80%;
+                    }
                 }
             }
         }
@@ -65,7 +59,7 @@
         &__title {
             font-size: 2.4rem;
             padding-left: 46px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             font-weight: bold;
         }
   

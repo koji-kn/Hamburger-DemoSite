@@ -1,3 +1,6 @@
+@use"../../foundation/variables";
+@use"../../foundation/mixin";
+
 .c-btn{
     background: linear-gradient( #F2EDE9 0%, #DED8D3 100%);
     font-weight: bold;
@@ -7,5 +10,73 @@
         transform: translateY(-4px);
         box-shadow: 0 4px grey;
     
+    }
+
+    // &__scale{
+
+    //     &:hover{
+    //         transform: scale(1.1);
+    //         transition: all 0.2s;
+    //     }
+    // }
+
+    // &__slide{
+    //     position: relative;
+    //     z-index: 1;
+    //     transition: .3s;
+    //     overflow: hidden;
+
+    //     &::before{
+    //         content: "";
+    //         width: 100%;
+    //         height: 100%;
+    //         position: absolute;
+    //         top: 0;
+    //         left: 0;
+    //         z-index: -1;
+    //         // background: ; ホバー時の背景色 
+    //         transition: transform ease .3s;
+    //         transform-origin: 100% 50%;
+    //         transform: scaleX(0);
+    //     }
+
+    //     // &:hover{
+    //     //    color: ; 文字色を変更する場合に指定
+    //     // }
+
+    //     &:hover::before{
+    //         transform-origin: 0% 50%;
+    //         transform: scaleX(1);
+    //     }
+    // }
+
+    &__underline{
+            position: relative;
+
+            &::before{
+                background: variables.$color--contents;
+                content: '';
+                width: 70%;
+                height: 3px;
+                position: absolute;
+                left: 20px;
+                bottom: 2px;
+                margin: auto;
+                transform-origin: right top;
+                transform: scale(0, 1);
+                transition: transform .3s;
+
+                @include mixin.breakpoint(full){
+                    left: 45px;
+                    bottom: 10px;
+                }
+                
+            }
+
+            &:hover::before{
+                transform-origin: left top;
+                transform: scale(1, 1);
+            }
+
     }
 }
