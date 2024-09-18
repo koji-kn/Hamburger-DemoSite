@@ -21,6 +21,7 @@
         width: 216px;
         padding-left: 30px;
         background: url(../images/icon/search.png) no-repeat left 4px center;
+        transition: width 0.3s;
 
         @include mixin.breakpoint(tablet){
             width: 396px;

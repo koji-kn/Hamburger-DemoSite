@@ -1,0 +1,30 @@
+@use"../../foundation/variables";
+@use"../../foundation/mixin";
+
+.p-gallery{
+        display: grid;
+        grid-template-columns:1fr;
+        margin-top: 30px;
+        gap: 20px 16px;
+
+        @include mixin.breakpoint(tablet){
+            grid-template-columns: 1fr 1fr;
+            margin-top: 240px; //?
+        }
+        
+        @include mixin.breakpoint(pc){
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-top: 60px;
+            gap: 20px;
+        }
+
+    &__img{
+        width: 100%;
+        aspect-ratio: 1.6 / 1;
+        
+        img{
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

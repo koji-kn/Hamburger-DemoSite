@@ -5,19 +5,20 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 20px;
     
     @include mixin.breakpoint(tablet){
         flex-direction: row;
         justify-content: space-between;
-
-        max-width: 755px;
-        column-gap: 10px;
-        margin: 40px auto;
+        max-width: 800px;
+        gap: 40px;
+        margin: 20px auto;
     }
 
     @include mixin.breakpoint(full){
-        max-width: 1300px;
-        margin: 120px auto;
+        max-width: 1320px;
+        margin: 100px auto;
+        gap: 80px;
     }
 
     &__wrap{
@@ -29,12 +30,10 @@
     &__typography{
         display: flex;
         flex: 1;
-        margin: 20px;
         min-height: 643px;
         
         @include mixin.breakpoint(tablet){
-            max-width: 357px;
-            margin: auto;
+            max-width: 375px;
             min-height: 680px;
         }
         

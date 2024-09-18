@@ -1,0 +1,37 @@
+@use"../../foundation/variables";
+@use"../../foundation/mixin";
+
+table, tr, th, td{
+    border-collapse: collapse;
+    box-sizing: border-box;
+}
+
+.c-table,
+.c-table__data{
+    border: 1px solid variables.$color--font;
+}
+
+.c-table{
+    width: 100%;
+
+    &__data{
+        height: 77px;
+        padding-left: 29px;
+    }
+
+    &__data:first-child{
+        width: 40%;
+
+        @include mixin.breakpoint(tablet){
+            width: 30%;
+        }
+    }
+}
+
+
+// <table class="c-table">
+// <tr class="c-table__row">
+//     <td class="c-table__data">テーブル</td>
+//     <td class="c-table__data">テーブル</td>
+// </tr>
+// </table>

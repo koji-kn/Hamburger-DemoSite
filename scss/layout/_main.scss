@@ -12,8 +12,15 @@
             position: absolute;
             content: "";
             background-color: variables.$color--white;           
-
         }
+    }
+
 }
 
+section{
+    padding: 20px;
+
+    @include mixin.breakpoint(pc){
+        max-width: 1393px;
+    }
 }

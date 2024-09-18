@@ -13,6 +13,7 @@ $btnHeight: 6px;
     top: 0;
     right: 0;
 	z-index: 1001;
+    user-select: none;
 
 	@include mixin.breakpoint(pc){
         display: none;
@@ -78,4 +79,8 @@ $btnHeight: 6px;
             opacity: 0.7;
         }
 	}
+}
+
+body.is-open{
+    position: fixed;
 }

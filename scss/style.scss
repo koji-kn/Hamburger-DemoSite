@@ -14,19 +14,17 @@
 @forward"../scss/layout/header";
 @forward"../scss/layout/aside";
 @forward"../scss/layout/footer";
+
 // ==========================================================================
 // Object
 // ==========================================================================
 @forward"../scss/object/component/card";
-// @forward"../scss/object/component/table";
-// @forward"../scss/object/component/player";
+@forward"../scss/object/component/table";
 @forward"../scss/object/component/typography";
-// @forward"../scss/object/component/modal";
-// @forward"../scss/object/component/hover";
+@forward"../scss/object/component/modal";
 @forward"../scss/object/component/button";
 @forward"../scss/object/component/home-btn";
 @forward"../scss/object/component/arrow";
-// @forward"../scss/object/component/triangle";
 
 // -----------------------------------------------------------------
 // Project
@@ -39,11 +37,11 @@
 @forward"../scss/object/project/information";
 @forward"../scss/object/project/archive";
 @forward"../scss/object/project/pagination";
+@forward"../scss/object/project/single";
+@forward"../scss/object/project/gallery";
 
 // -----------------------------------------------------------------
 // utility
 // -----------------------------------------------------------------
 @forward"../scss/object/utility/margin";
 @forward"../scss/object/utility/flex";
-// @forward"../scss/object/utility/padding";
-// @forward"../scss/object/utility/text";

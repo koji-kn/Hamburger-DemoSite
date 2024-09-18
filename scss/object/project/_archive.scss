@@ -2,14 +2,12 @@
 @use"../../foundation/mixin";
 
 .p-archive{
-    padding: 32px 20px;
     
     @include mixin.breakpoint(tablet){
         margin: 7px auto 0;   
     }
     
     @include mixin.breakpoint(pc){
-        max-width: 1353px;
         margin: 32px auto;
     }
 
@@ -63,6 +61,7 @@
             h3{
                 font-size: 2.0rem;
                 margin-bottom: 21px;
+                white-space: no-wrap;
 
                 @include mixin.breakpoint(full){
                     font-size: 3.6rem;
