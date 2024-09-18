@@ -112,11 +112,6 @@ blockquote{
         padding: 50px;
     }
 
-    // p{
-    //     @include mixin.breakpoint(pc){
-    //         margin-bottom: 57px;
-    //     }
-    // }
 }
 
 cite a{
@@ -128,11 +123,6 @@ cite a{
 
 small{
     font-size: 1.4rem;
-}
-
-.search-result{
-    font-weight: 700;
-    font-size: 1.6rem;
 }
 
 .inview{

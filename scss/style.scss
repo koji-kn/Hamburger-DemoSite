@@ -12,7 +12,7 @@
 // ==========================================================================
 @forward"../scss/layout/main";
 @forward"../scss/layout/header";
-@forward"../scss/layout/aside";
+@forward"../scss/layout/side";
 @forward"../scss/layout/footer";
 
 // ==========================================================================
@@ -44,4 +44,4 @@
 // utility
 // -----------------------------------------------------------------
 @forward"../scss/object/utility/margin";
-@forward"../scss/object/utility/flex";
+// @forward"../scss/object/utility/flex";
