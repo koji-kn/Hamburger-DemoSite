@@ -125,16 +125,6 @@ small{
     font-size: 1.4rem;
 }
 
-.inview{
-    transform: translateY(30px);
-    opacity: 0;
-    transition: tramsform 1s, opacity 1s;
-}
-
-.inview.show{
-    transform: translateY(0);
-    opacity: 1;
-}
 
 
 

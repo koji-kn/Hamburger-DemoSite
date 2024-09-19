@@ -24,9 +24,6 @@
     top: 0;
     left: 0;
     width: 100vw;
-    // /* コンテンツ全てに対して固定的に 1160pxとか指定されているときの対応で、
-    // ダサいが!importantつける */
-    // max-width: 100% !important;
     height: 100vh;
     background: rgba(0, 0, 0, 0.6);
     z-index: 10000;

@@ -1,24 +1,5 @@
 $color--arrow :#707070;
 
-// .c-arrow__left{
-//     position: relative;
-//     display: inline-block;
-
-//     &::before{
-//         position: absolute;
-//         content: "";
-//         width: 16px;
-//         height: 16px;
-//         border: 0;
-//         border-top: 1px solid $color--arrow;
-//         border-left: 1px solid $color--arrow;
-//         transform: rotate(-45deg);
-//         top: 0;
-//         left: 0;
-//     }
-
-// }
-
 .c-arrow__left{
     position: relative;
     display: block;

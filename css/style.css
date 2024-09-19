@@ -112,17 +112,6 @@ small {
   font-size: 1.4rem;
 }
 
-.inview {
-  transform: translateY(30px);
-  opacity: 0;
-  transition: tramsform 1s, opacity 1s;
-}
-
-.inview.show {
-  transform: translateY(0);
-  opacity: 1;
-}
-
 .l-main {
   width: 100%;
 }
@@ -425,6 +414,27 @@ table, tr, th, td {
 }
 .c-arrow__right--2nd {
   right: 9px;
+}
+
+.inview {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: tramsform 1s, opacity 1s;
+}
+
+.inview.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.viewer {
+  position: relative;
+  height: 100%;
+}
+.viewer img {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .hover-icon {
@@ -805,11 +815,6 @@ body.is-open {
 @media (min-width: 639px) {
   .p-information__mask {
     height: 100%;
-  }
-}
-@media (min-width: 639px) {
-  .p-information__mask {
-    height: 100%;
     max-width: 950px;
   }
 }
@@ -874,12 +879,15 @@ body.is-open {
 @media (min-width: 639px) {
   .p-archive__card {
     flex-direction: row;
-    height: 355px;
+    min-height: 355px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
   }
 }
 @media (min-width: 1201px) {
   .p-archive__card {
-    height: 470px;
+    min-height: 470px;
   }
 }
 .p-archive__card--contents {
@@ -900,7 +908,6 @@ body.is-open {
 .p-archive__card--contents h3 {
   font-size: 2rem;
   margin-bottom: 21px;
-  white-space: no-wrap;
 }
 @media (min-width: 1201px) {
   .p-archive__card--contents h3 {
@@ -1033,11 +1040,17 @@ body.is-open {
 }
 
 .p-single {
-  margin: 0 auto;
+  margin: 0 auto 40px;
 }
 @media (min-width: 639px) {
   .p-single {
     padding: 60px 20px;
+    margin-bottom: 90px;
+  }
+}
+@media (min-width: 1000px) {
+  .p-single {
+    margin-bottom: 217px;
   }
 }
 .p-single__mainvisual {
@@ -1155,21 +1168,6 @@ body.is-open {
     margin-bottom: 60px;
   }
 }
-.p-single__link {
-  display: inline-block;
-  margin-bottom: 40px;
-  font-weight: bold;
-}
-@media (min-width: 639px) {
-  .p-single__link {
-    margin-bottom: 90px;
-  }
-}
-@media (min-width: 1000px) {
-  .p-single__link {
-    margin-bottom: 217px;
-  }
-}
 
 .p-gallery {
   display: grid;
@@ -1208,5 +1206,9 @@ body.is-open {
 .u-margin__middle {
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.u-font__bold {
+  font-weight: 700;
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,10 +2,15 @@
 @use"../../foundation/mixin";
 
 .p-single{
-    margin: 0 auto;
+    margin: 0 auto 40px;
 
     @include mixin.breakpoint(tablet){
         padding: 60px 20px;
+        margin-bottom: 90px;
+    }
+
+    @include mixin.breakpoint(pc){
+        margin-bottom: 217px;
     }
 
     &__mainvisual{
@@ -134,20 +139,8 @@
             margin-bottom: 60px;
         }
     }
-
-    &__link{
-        display: inline-block;
-        margin-bottom: 40px;
-        font-weight: bold;
-
-        @include mixin.breakpoint(tablet){
-            margin-bottom: 90px;
-        }
-
-        @include mixin.breakpoint(pc){
-            margin-bottom: 217px;
-        }
-    }
   
 }
+
+
 
