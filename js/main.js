@@ -1,6 +1,5 @@
 'use strict';{
     const hamburger = document.querySelector('.js-hamburger');
-    const mediaQueryList = window.matchMedia('(min-width: 1199px)');
     const gmenu = document.querySelector(".p-gmenu");
     const mask = document.querySelector(".mask");
     
@@ -80,9 +79,28 @@
         });
     });
   
+
     //高さ揃え
-    // $(function() {
-    //     $('.js-matchHeight_u').matchHeight();
-    //  });
+    const targetTop = document.querySelectorAll('.detail-t'); 
+    const targetUnder = document.querySelectorAll('.detail-u'); 
+    const heightlist = [];
+    const heightlistUnder = [];
+    targetTop.forEach(element => {
+        const height = element.clientHeight;
+        heightlist.push(height);
+    });
+    const maxHeight = Math.max.apply(null, heightlist);
+    targetTop.forEach(element => {
+        element.style.height = maxHeight + 'px';
+    });
+    targetUnder.forEach(element => {
+        const heightUnder = element.clientHeight;
+        heightlistUnder.push(heightUnder);
+    });
+    const maxHeightUnder = Math.max.apply(null, heightlistUnder);
+    targetUnder.forEach(element => {
+        element.style.height = maxHeightUnder + 'px';
+    });
+
   
 }

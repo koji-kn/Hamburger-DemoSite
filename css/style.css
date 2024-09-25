@@ -673,6 +673,7 @@ body.is-open {
   justify-content: space-between;
   height: 100%;
   min-height: 643px;
+  padding: 16px;
 }
 @media (min-width: 639px) {
   .p-home__typography {
@@ -694,10 +695,9 @@ body.is-open {
   transform: scale(1.1);
 }
 .p-home__title {
-  margin-top: 6px;
-  margin-left: 16px;
   font-size: 4.1rem;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
+  margin-bottom: auto;
 }
 @media (min-width: 1201px) {
   .p-home__title {
@@ -719,9 +719,12 @@ body.is-open {
 }
 .p-home__detail {
   font-family: "M PLUS 1";
-  margin: 16px;
   padding: 6px 16px 21px 16px;
   background: rgba(255, 255, 255, 0.8);
+  margin-bottom: 16px;
+}
+.p-home__detail:last-child {
+  margin-bottom: 0;
 }
 .p-home__detail h3 {
   font-size: 2.4rem;
