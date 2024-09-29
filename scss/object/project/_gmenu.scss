@@ -21,7 +21,8 @@
         overflow-y: scroll;
 
         @include mixin.breakpoint(tablet){
-            width :367px;
+            width :100%;
+            max-width :367px;
         }
         
         @include mixin.breakpoint( pc ) {

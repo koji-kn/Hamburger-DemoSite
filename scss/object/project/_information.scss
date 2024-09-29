@@ -17,10 +17,7 @@
 
         @include mixin.breakpoint(pc){
             width: 62%;
-        }
-
-        @include mixin.breakpoint(full){
-            padding: 86px 134px 75px 119px;
+            padding: 86px 9% 75px 8%;
         }
     }
 
@@ -42,9 +39,9 @@
     &__title{
         font-size: 3.0rem;
         margin-bottom: 30px;
+        word-break: keep-all;      
         
-        
-        @include mixin.breakpoint(full){
+        @include mixin.breakpoint(pc){
             font-size: 3.6rem;
             margin-bottom: 109px;
         }
@@ -55,7 +52,7 @@
             top: 62px;
             left: 0;
             
-            @include mixin.breakpoint(full){
+            @include mixin.breakpoint(pc){
                 top: 110px;
             }
         }

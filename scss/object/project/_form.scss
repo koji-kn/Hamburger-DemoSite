@@ -8,8 +8,11 @@
     margin-top: 40px;
     margin-bottom: 40px;
 
-    @include mixin.breakpoint(full){
+    @include mixin.breakpoint(pc){
+        justify-content: flex-end;
+        flex-grow: 1;
         margin: 0 30px;
+        position: relative;
     }
     
     &__input,
@@ -23,11 +26,26 @@
         width: 216px;
         padding-left: 30px;
         background: url(../images/icon/search.png) no-repeat left 4px center;
-        transition: width 0.3s;
-
+        // transition: width 0.3s;
+        
         @include mixin.breakpoint(tablet){
-            width: 396px;
+            flex-grow: 1;
+            max-width: 396px;
         }
+
+        @include mixin.breakpoint(pc){
+            &:focus{
+                position: absolute;
+                width: 396px;
+                top: 0;
+                right: 146px;
+                border-color: variables.$color--contents;
+                background-color: #fff;
+                box-shadow: -10px 10px 5px rgba($color: #fff, $alpha: 0.7);
+            }
+       
+        }
+        
 
     }
     
@@ -46,3 +64,4 @@
     font-weight: 700;
     font-size: 1.6rem;
 }
+

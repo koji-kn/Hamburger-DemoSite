@@ -11,14 +11,14 @@
         flex-direction: row;
         justify-content: space-between;
         max-width: 800px;
-        gap: 40px;
-        margin: 20px auto;
+        column-gap: 4%;
+        margin: 60px auto;
     }
 
     @include mixin.breakpoint(full){
         max-width: 1320px;
-        margin: 100px auto;
-        gap: 80px;
+        margin: 120px auto;
+        column-gap: 5.2%;
     }
   
     &__typography{
@@ -55,8 +55,12 @@
         padding-bottom: 80px;
         margin-bottom: auto;
 
+        @include mixin.breakpoint(pc){
+            font-size: 4.3vw;
+        }
+        
         @include mixin.breakpoint(full){
-            font-size: 8.0rem;
+            font-size: clamp(4.1rem, 6.0vw, 8.0rem);
         }
         
         &::after{

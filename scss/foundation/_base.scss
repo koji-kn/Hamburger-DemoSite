@@ -25,7 +25,7 @@ body{
         "header aside" 216px
         "main aside" 
         "footer footer" ;
-        grid-template-columns: 1fr 328px;
+        grid-template-columns: 2.8fr 1.2fr;
     }
 
     .l-header{
@@ -38,6 +38,7 @@ body{
 
     .l-side{
         grid-area: aside;
+        min-width: 280px;
     }
     
     .l-footer{

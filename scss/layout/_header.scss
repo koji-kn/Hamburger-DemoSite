@@ -5,7 +5,7 @@
     font-family: "Roboto", sans-serif;
     padding-top: 60px;
 
-    @include mixin.breakpoint(full){
+    @include mixin.breakpoint(pc){
         padding-top: 0;
         display: flex;
         justify-content: space-between;
@@ -18,12 +18,10 @@
         line-height: 48px;
 
         @include mixin.breakpoint(pc){
-            font-size: 6.4rem;
-        }
-
-        @include mixin.breakpoint(full){
+            font-size: clamp(4.0rem ,5.0vw, 6.4rem);
             margin-left: 64px;
-        }
+        }     
+     
     }
 
 
