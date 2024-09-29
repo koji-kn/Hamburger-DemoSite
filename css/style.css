@@ -790,8 +790,8 @@ body.is-open {
   font-size: 1.6rem;
 }
 
-.p-information,
-.p-information__mask {
+.p-information__wrap,
+.p-information {
   background: rgba(0, 0, 0, 0.3);
 }
 
@@ -804,6 +804,11 @@ body.is-open {
 .p-information__wrap {
   max-width: 950px;
   padding: 41px 40px 57px;
+}
+@media (min-width: 1000px) {
+  .p-information__wrap {
+    width: 62%;
+  }
 }
 @media (min-width: 1201px) {
   .p-information__wrap {
