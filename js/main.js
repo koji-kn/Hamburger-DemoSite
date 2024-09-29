@@ -81,26 +81,8 @@
   
 
     //高さ揃え
-    const targetTop = document.querySelectorAll('.detail-t'); 
-    const targetUnder = document.querySelectorAll('.detail-u'); 
-    const heightlist = [];
-    const heightlistUnder = [];
-    targetTop.forEach(element => {
-        const height = element.clientHeight;
-        heightlist.push(height);
-    });
-    const maxHeight = Math.max.apply(null, heightlist);
-    targetTop.forEach(element => {
-        element.style.height = maxHeight + 'px';
-    });
-    targetUnder.forEach(element => {
-        const heightUnder = element.clientHeight;
-        heightlistUnder.push(heightUnder);
-    });
-    const maxHeightUnder = Math.max.apply(null, heightlistUnder);
-    targetUnder.forEach(element => {
-        element.style.height = maxHeightUnder + 'px';
-    });
-
+    // $(function(){
+    //     $('.detail-t').matchHeight();
+    // });
   
 }
