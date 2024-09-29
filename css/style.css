@@ -20,6 +20,7 @@ body {
     display: grid;
     grid-template: "header aside" 216px "main aside" "footer footer";
     grid-template-columns: 2.8fr 1.2fr;
+    overflow-x: scroll;
   }
   .l-header {
     grid-area: header;

@@ -26,6 +26,7 @@ body{
         "main aside" 
         "footer footer" ;
         grid-template-columns: 2.8fr 1.2fr;
+        overflow-x: scroll;
     }
 
     .l-header{
