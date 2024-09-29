@@ -177,6 +177,45 @@ section {
   }
 }
 
+.l-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 150px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 1.8rem;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFDFA;
+  background: #9D8670;
+  position: relative;
+}
+@media (min-width: 639px) {
+  .l-footer {
+    padding-top: 30px;
+    padding-bottom: 24px;
+  }
+}
+@media (min-width: 1000px) {
+  .l-footer {
+    padding-top: 41px;
+    padding-bottom: 27px;
+  }
+}
+.l-footer__menu li {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.l-footer__menu li:last-child {
+  border-left: 2px solid #fff;
+}
+.l-footer__menu li:hover {
+  font-weight: bold;
+}
+
 .c-card {
   display: flex;
 }
