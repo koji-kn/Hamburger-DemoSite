@@ -783,7 +783,7 @@ body.is-open {
 }
 .p-search-form__input {
   width: 216px;
-  padding-left: 30px;
+  padding-left: 50px;
   background: url(../images/icon/search.png) no-repeat left 4px center;
   transition: width 0.3s;
 }
