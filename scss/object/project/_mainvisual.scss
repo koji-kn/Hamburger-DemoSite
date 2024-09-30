@@ -17,6 +17,7 @@
         flex-direction: column;
 
         @include mixin.breakpoint(pc){
+            padding-left: 0;
             flex-direction: row;
             align-items: center;
             column-gap: 18px;
@@ -52,11 +53,16 @@
 
         @include mixin.breakpoint(pc){
             font-size: 4.0rem;
+            margin-left: clamp(30px , 4.3vw, 86px);
         }
 
 
         &--single{
             letter-spacing: normal;
+
+            @include mixin.breakpoint(tablet){
+                font-size: 6.0rem;
+            }
         }
     
     }

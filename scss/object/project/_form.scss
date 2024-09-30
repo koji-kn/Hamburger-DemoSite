@@ -7,12 +7,11 @@
     column-gap: 10px;
     margin-top: 40px;
     margin-bottom: 40px;
-
+    
     @include mixin.breakpoint(pc){
         justify-content: flex-end;
         flex-grow: 1;
         margin: 0 30px;
-        position: relative;
     }
     
     &__input,
@@ -26,7 +25,7 @@
         width: 216px;
         padding-left: 30px;
         background: url(../images/icon/search.png) no-repeat left 4px center;
-        // transition: width 0.3s;
+        transition: width 0.3s;
         
         @include mixin.breakpoint(tablet){
             flex-grow: 1;
@@ -35,13 +34,13 @@
 
         @include mixin.breakpoint(pc){
             &:focus{
-                position: absolute;
-                width: 396px;
-                top: 0;
-                right: 146px;
+                // position: absolute;
+                // width: 396px;
+                // top: 0;
+                // right: 146px;
+                // background-color: #fff;
+                // box-shadow: -10px 10px 5px rgba($color: #fff, $alpha: 0.7);
                 border-color: variables.$color--contents;
-                background-color: #fff;
-                box-shadow: -10px 10px 5px rgba($color: #fff, $alpha: 0.7);
             }
        
         }

@@ -13,6 +13,7 @@
             content: "";
             background-color: variables.$color--white;           
         }
+        
     }
 
 }
@@ -21,6 +22,7 @@ section{
     padding: 20px;
 
     @include mixin.breakpoint(pc){
-        max-width: 1393px;
+        width: 90%;
+        max-width: 1353px;
     }
 }

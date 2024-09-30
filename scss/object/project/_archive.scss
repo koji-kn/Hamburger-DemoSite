@@ -55,16 +55,20 @@
             flex-basis: calc(100% - 34px);
 
             @include mixin.breakpoint(full){
-                padding: 55px 60px 60px 60px;
+                padding-top: 55px;
+                padding-bottom: 60px;
+                padding-left: clamp(20px, 3.3vw, 60px);
+                padding-right: clamp(20px, 3.6vw, 60px);
                 flex-basis: calc(100% - 120px);
             }
 
             h3{
                 font-size: 2.0rem;
                 margin-bottom: 21px;
+                overflow-wrap: break-spaces;
 
-                @include mixin.breakpoint(full){
-                    font-size: 3.6rem;
+                @include mixin.breakpoint(pc){
+                    font-size: clamp(20px, 1.8vw, 36px);
                     margin-bottom: 44px;
                 }
             }
@@ -73,15 +77,15 @@
                 font-size: 1.6rem;
                 margin-bottom: 7px;
 
-                @include mixin.breakpoint(full){
-                    font-size: 2.4rem;
+                @include mixin.breakpoint(pc){
+                    font-size: clamp(16px, 1.4vw, 28px);
                     margin-bottom: 13px;
                 }
             }
             
         }
 
-        &--info{
+        &--info p{
             @include mixin.breakpoint(full){
                 padding-right: 40px;
             }
@@ -90,9 +94,13 @@
         &--img{
             height: 230px;
             flex-basis: 100%;
-
+            
             @include mixin.breakpoint(tablet){
                 height: auto;
+            }
+            
+            img{
+                object-position: left;
             }
             
         }

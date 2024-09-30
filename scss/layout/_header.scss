@@ -19,7 +19,7 @@
 
         @include mixin.breakpoint(pc){
             font-size: clamp(4.0rem ,5.0vw, 6.4rem);
-            margin-left: 64px;
+            margin-left: clamp(30px , 4.1vw, 64px);
         }     
      
     }
