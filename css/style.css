@@ -1249,4 +1249,8 @@ body.is-open {
 .u-font__bold {
   font-weight: 700;
 }
+
+.u-width {
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */
