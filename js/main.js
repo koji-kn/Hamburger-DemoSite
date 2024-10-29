@@ -78,21 +78,14 @@
         return false;
         });
     });
-  
-
-    //高さ揃え
-    // $(function(){
-    //     $('.detail-t').matchHeight();
-    // });
 
     
-    //検索ボックスのキーワード教示
-    const search = document.getElementById('searchsubmit');
-    const searchResult = document.querySelector('.search-result');
-    search.addEventListener('click', () =>{
-        let searchText = document.querySelector('#search-text').value;
-        searchResult.textContent = searchText;
-    })
 
+    $(function() {
+        $('.detail-u').matchHeight();
+        $('.detail-d').matchHeight();
+        $('.p-home__detail--wrap').matchHeight();
+    });
+  
   
 }

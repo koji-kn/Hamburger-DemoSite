@@ -26,7 +26,7 @@ body{
         "main aside" 
         "footer footer" ;
         grid-template-columns: 2.8fr 1.2fr;
-        overflow-x: scroll;
+        // overflow-x: scroll;
     }
 
     .l-header{
@@ -72,6 +72,7 @@ h1,h2,h3,h4,h5,h6{
 
 h1{
     font-size: 3.6rem;
+    word-wrap: break-word;
 
     @include mixin.breakpoint(pc){
         font-size: 6.0rem;
@@ -127,6 +128,8 @@ cite a{
 small{
     font-size: 1.4rem;
 }
+
+
 
 
 

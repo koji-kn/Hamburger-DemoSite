@@ -1,0 +1,39 @@
+@use"../../foundation/variables";
+@use"../../foundation/mixin";
+
+.p-comment{
+    margin-top: 50px;
+}
+
+.comment{
+    
+    &__ttl{
+        margin-bottom: 10px;
+    }
+    
+    &-body{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        
+        // @include mixin.breakpoint(tablet){
+            //     flex-direction: row;
+            //     column-gap: 20px;
+            // }
+        }
+        
+        p{
+            padding: 10px 0;
+        }
+        
+    }
+    .avatar{
+        width: 60px;
+        height: 60px;
+    }
+    
+    .comment-meta,
+    cite{
+        font-size: 1.3rem;
+        font-style: italic;
+    }

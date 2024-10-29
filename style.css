@@ -1,0 +1,262 @@
+/*
+Theme Name: HBDemo
+Description: RaiseTech WP最終課題のテーマ
+Version: 1.0.0
+Theme URI: https://github.com/koji-kn/Hamburger-DemoSite
+Author: koji kaneko
+Author URI: https://koji-kn.com
+Tags: raisetech, wordpress
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: HBDemo
+Tested up to: 6.6
+Requires PHP: 7.3
+*/
+
+
+
+.wp-caption {
+    font-size: 1.3rem
+}
+
+.wp-caption-text {
+    margin-top: -20px;
+}
+
+.sticky {
+    padding: 20px;
+    background: #f3f3f3;
+}
+
+.gallery-caption {
+    font-size: 1.3rem;
+}
+
+.bypostauthor {
+    padding: 20px;
+    background: #f0f8ff;
+}
+
+.wp-block-media-text{
+  column-gap: 10px;
+}
+
+.wp-block-media-text>.wp-block-media-text__content{
+    padding: 0;
+}
+
+@media (min-width: 639px) {
+
+    .wp-block-media-text{
+        column-gap: 20px;
+    }
+}
+
+.wp-block-cover{
+    align-items: start;
+}
+
+.wp-block-cover__inner-container{
+    height: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-u{
+    margin-bottom: 16px;
+}
+
+
+.navigation,
+.nav-links{
+    width: 100%;
+}
+
+.nav-links .page-numbers {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-links {
+    justify-content: center;
+}
+.page-numbers {
+    justify-content: space-between;
+}
+
+.nav-links a.page-numbers ,
+.nav-links .current,
+.nav-links a.prev,
+.nav-links a.next,
+.nav-links .dots {
+    /* width: 35px; */
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    background: #fff;
+    color: #707070;
+    margin-right: 15px;
+    font-size: 16px;
+    border: 1px solid #707070;
+    font-weight: bold;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+
+/*二重矢印*/
+.nav-links a.prev,
+.nav-links a.next{
+    border: none;
+    font-weight: 400;
+    position: relative;
+    display: block;
+}
+
+.nav-links a.prev::before,
+.nav-links a.prev::after,
+.nav-links a.next::before,
+.nav-links a.next::after{
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    border: 0;
+    border-top: 1px solid #707070;
+    border-left: 1px solid #707070;
+}
+
+.nav-links a.prev::before,
+.nav-links a.prev::after{
+    transform: rotate(-45deg);
+    top: 10px;
+}
+
+.nav-links a.prev::before{
+    left: -9px;
+}
+
+.nav-links a.prev::after{
+    left: 0px;
+}
+
+.nav-links a.next::before,
+.nav-links a.next::after{
+    transform: rotate(135deg);
+    top: 10px;
+}
+.nav-links a.next::before{
+    right: 0px;
+}
+.nav-links a.next::after{
+    right: -9px;
+}
+/*二重矢印ここまで*/
+
+
+
+.nav-links a.page-numbers:hover {
+    color: black;
+}
+
+.nav-links .current {
+    background: #3C2A10;
+    color: #FFFFFF;
+}
+
+.is-style-page-button{
+    display: block;
+    background: linear-gradient(#F2EDE9 0%, #DED8D3 100%);
+    font-weight: bold;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    width: 100%;
+    height: 81px;
+    border-radius: 20px;
+    border: 1px solid #707070;
+    max-width: 429px;
+    margin-bottom: 30px;
+}
+
+.is-style-page-button:hover {
+    opacity: 0.8;
+    transform: translateY(-4px);
+    box-shadow: 0 4px grey;
+}
+
+.alignright{
+    margin-left: auto;
+}
+
+.alignleft{
+    margin-right: auto;
+}
+
+.aligncenter{
+    margin: 0 auto;
+}
+
+.p-archive__card--info{
+    max-height: 200px;
+    overflow: hidden;
+}
+
+.p-archive__card--info h2{
+   font-size: 2.0rem;
+}
+
+.wp-block-read-more{
+    margin: 10px auto;
+}
+
+
+@media (min-width: 639px) {
+
+    .p-archive__card--info{
+        max-height: 300px;
+    }
+
+    .navigation,
+    .nav-links{
+        width: auto;
+    }
+
+    .page-numbers{
+        justify-content: center;
+    }
+
+    .nav-links a.prev,
+    .nav-links a.next{
+        font-size: 0;
+        padding: 0 5px;
+    }
+}
+@media (max-width: 638px) {
+    
+    .nav-links a.page-numbers:not(.nav-links a.prev,.nav-links a.next),
+    .nav-links .current,
+    .nav-links .dots{
+        display: none;
+    }
+}
+
+.page-split{
+    margin: 50px auto;
+    text-align: center;
+}
+
+.page-split span{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    margin-right: 12px;
+    border: 1px solid #3C2A10;
+}
+
+.post-page-numbers.current{
+    background: #3C2A10;
+    color: #FFFFFF;
+}

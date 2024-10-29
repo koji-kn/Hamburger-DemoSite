@@ -21,8 +21,8 @@
 section{
     padding: 20px;
 
-    @include mixin.breakpoint(pc){
-        width: 90%;
+    @include mixin.breakpoint(full){
+        width: 95%;
         max-width: 1353px;
     }
 }

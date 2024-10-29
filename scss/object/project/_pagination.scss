@@ -7,6 +7,8 @@
     display: flex;
     justify-content: space-between;
     margin-top: 62px;
+    align-items: center;
+    margin-bottom: 12px;
 
     @include mixin.breakpoint(tablet){
         justify-content: space-around;
@@ -17,53 +19,131 @@
     @include mixin.breakpoint(pc){
         margin-top: 150px;
     }
-    
-    &__prev{
+
+    &__prev,
+    &__next,
+    &__single{
         display: flex;
         align-items: center;  
-        
-        li{
-            display: inline-block;
+    }
+
+    &__single{
+        margin-top: 50px;
+        justify-content: space-between;
+        width: 95%;
+    }
+
+    &__prev,
+    &__next{
+        column-gap: 10px;
+        position: relative;
+    }
+    
+    &__prev{
+        min-width: 175px;
+
+        &::before,
+        &::after{
+            position: absolute;
+            content: "";
+            width: 12px;
+            height: 12px;
+            border: 0;
+            border-top: 1px solid variables.$color--contents;
+            border-left: 1px solid variables.$color--contents;
+            transform: rotate(-45deg);
+            top: 40%;
         }
 
-    }
-    
-    &__list{
-        position: relative;
-        margin-right: 25px;
-    }
+        &::before{
+            left: -13px;
+        }
 
-    &__list--right{
-        position: relative;
-        margin-left: 25px;   
-    }
-    
-    &__icon{
-        position: absolute;
-        top: -6px;
-    }
-    
-    &__guide{
-
-        @include mixin.breakpoint(tablet){
-            display: none;
+        &::after{
+            left: -21px;
         }
     }
+    
+    &__next{
+        flex-direction: row-reverse;
+        margin-left: 50px;
 
-    &__number{
+        &::before,
+        &::after{
+            position: absolute;
+            content: "";
+            width: 12px;
+            height: 12px;
+            border: 0;
+            border-top: 1px solid variables.$color--contents;
+            border-left: 1px solid variables.$color--contents;
+            transform: rotate(135deg);
+            top: 40%;
+        }
+
+        &::before{
+            right: -13px;
+        }
+
+        &::after{
+            right: -21px;
+        }
+    }
+    
+    &__img{
+
         display: none;
-        
-        @include mixin.breakpoint(tablet){
+
+        @include mixin.breakpoint(pc){
             display: inline-block;
-            padding: 4px 12px;
-            margin: 0 7px;
-            border: 1px solid variables.$color--contents;
+            height: 60px;
+            width: 60px;
         }
     }
     
-    a:hover{
+    &__prev:hover,
+    &__next:hover{
         font-weight: bold;
     }
+
+    // }
+    
+    // &__list{
+    //     position: relative;
+    //     margin-right: 25px;
+    // }
+
+    // &__list--right{
+    //     position: relative;
+    //     margin-left: 25px;   
+    // }
+    
+    // &__icon{
+    //     position: absolute;
+    //     top: -6px;
+    // }
+    
+    // &__guide{
+
+    //     @include mixin.breakpoint(tablet){
+    //         display: none;
+    //     }
+    // }
+
+    // &__number{
+    //     display: none;
+        
+    //     @include mixin.breakpoint(tablet){
+    //         display: inline-block;
+    //         padding: 4px 12px;
+    //         margin: 0 7px;
+    //         border: 1px solid variables.$color--contents;
+    //     }
+    // }
+    
+    // a:hover{
+    //     font-weight: bold;
+    // }
 
     &__archive{
         display: none;
@@ -75,13 +155,13 @@
         p{
             line-height: 35px;
             font-weight: bold;
-            margin-right: 20px;
+            margin-right: 25px;
         }
     }
 
 }
 
-.now-page{
-    background: variables.$color--contents;
-    color: #fff;
-}
+// .now-page{
+//     background: variables.$color--contents;
+//     color: #fff;
+// }

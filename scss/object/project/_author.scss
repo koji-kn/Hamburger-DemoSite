@@ -1,0 +1,35 @@
+@use"../../foundation/variables";
+@use"../../foundation/mixin";
+
+.author{
+    margin-top: 50px;
+    padding: 30px 20px;
+    border-top: 1px solid variables.$color--contents;
+    border-bottom: 1px solid variables.$color--contents;
+    
+    img{
+        width: 60px;
+        height: 60px;
+
+        @include mixin.breakpoint(pc){
+            width: 100px;
+            height: 100px;
+        }
+    }
+    
+    &__wrap{
+        width: 85%;
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+    }
+
+    &__name{
+        font-style: italic;
+        margin-bottom: 10px;
+    }
+
+    &__comment{
+        font-size: 1.4rem;
+    }
+}

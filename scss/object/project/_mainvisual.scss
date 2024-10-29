@@ -15,62 +15,72 @@
         padding-left: 12px;
         display: flex;
         flex-direction: column;
-
+        
         @include mixin.breakpoint(pc){
             padding-left: 0;
             flex-direction: row;
             align-items: center;
             column-gap: 18px;
         }
-
+        
     }
-
+    
     dd{
         @include mixin.breakpoint(pc){
             padding-top: 12px;
         }
     }
-
+    
     &--single{
         @include mixin.breakpoint(pc){
             height: 240px;
         }
     }
-
+    
     &__title{
         position: absolute;
         font-family: "Roboto";
         margin-left: 25px;
         letter-spacing: 2px;
+        word-break: break-all;
         color: variables.$color--white;
         top: 50%;
         transform: translate(0, -50%);
         z-index: 1;
-    
+        
         @include mixin.breakpoint(tablet){
             margin-left: 66px;
         }
-
+        
         @include mixin.breakpoint(pc){
             font-size: 4.0rem;
             margin-left: clamp(30px , 4.3vw, 86px);
         }
-
-
+        
+        
         &--single{
             letter-spacing: normal;
-
+            
             @include mixin.breakpoint(tablet){
                 font-size: 6.0rem;
             }
         }
-    
+        
+        
     }
-
-
+    
+    &__mask{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba($color: #000000, $alpha: 0.2);
+        z-index: 1;
+    }
+    
     &__img{
         height: 100%;
         object-fit: cover;
-        z-index: 0;
     }
 }
